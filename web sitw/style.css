@@ -1,0 +1,72 @@
+body {
+    background: black;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #a855f7;
+}
+
+.hero h2 {
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+/* PORTFOLIO */
+.portfolio {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
